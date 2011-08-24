@@ -1,0 +1,67 @@
+A mathematical model of the Mafia game
+http://migdal.wikidot.com/en:mafia
+(there you can read more about previous results, and contact me)
+
+For now the code is in Polish, sorry.
+It will be in English only after it grows to a decent size or there will be people interested in
+usage or contribution.
+
+by Piotr Migdal and Maciej Kolanowski, 2011
+
+
+# Pierwsze importujemy
+
+>>> from mafia_main import *
+
+#
+# Pojedyncze gry ze standardowymi ustawieniami, z wypisywaniem poszczegolnych krokow lub bez
+#
+
+>>> kto_wygral_jedna_gre(5,1,wypisuj=True)
+['m', 'c', 'c', 'c', 'c']
+1 zostal zlinczowany.
+3 zostal zamordowany.
+0 zostal zlinczowany.
+Wygrali miastowi!
+0
+>>> kto_wygral_jedna_gre(10,2,wypisuj=True)
+['m', 'm', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c']
+2 zostal zlinczowany.
+9 zostal zamordowany.
+8 zostal zlinczowany.
+5 zostal zamordowany.
+0 zostal zlinczowany.
+4 zostal zamordowany.
+6 zostal zlinczowany.
+7 zostal zamordowany.
+3 zostal zlinczowany.
+Wygrala mafia!
+1
+>>> kto_wygral_jedna_gre(10,2,wypisuj=True)
+['m', 'm', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c']
+4 zostal zlinczowany.
+5 zostal zamordowany.
+2 zostal zlinczowany.
+9 zostal zamordowany.
+8 zostal zlinczowany.
+3 zostal zamordowany.
+0 zostal zlinczowany.
+6 zostal zamordowany.
+7 zostal zlinczowany.
+Wygrala mafia!
+1
+>>> kto_wygral_jedna_gre(10,2)
+0
+>>> kto_wygral_jedna_gre(10,2)
+1
+
+#
+# Skanowanie dla jednego mafiozo
+#
+
+>>> skanuj_dla_jednego_mafiozo( 1, 10, 100)
+[[1, 1.0], [2, 0.40000000000000002], [3, 0.62], [4, 0.45000000000000001], [5, 0.56999999999999995], [6, 0.27000000000000002], [7, 0.46000000000000002], [8, 0.33000000000000002], [9, 0.45000000000000001], [10, 0.27000000000000002]]
+>>> skanuj_dla_jednego_mafiozo( 1, 10, 100)
+[[1, 1.0], [2, 0.51000000000000001], [3, 0.62], [4, 0.40000000000000002], [5, 0.54000000000000004], [6, 0.25], [7, 0.32000000000000001], [8, 0.26000000000000001], [9, 0.32000000000000001], [10, 0.27000000000000002]]
+
+
